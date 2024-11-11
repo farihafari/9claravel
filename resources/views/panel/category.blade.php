@@ -5,22 +5,20 @@
     <div class="row bg-light rounded mx-0">
         <div class="col-md-12">
             <h3>Add Category</h3>
-            <form>
+            <form method="post" enctype="multipart/form-data">
+                @csrf
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1"
+                    <label for="exampleInputEmail1" class="form-label">name</label>
+                    <input type="text" name="name" class="form-control" id="exampleInputEmail1"
                         aria-describedby="emailHelp">
-                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+                    <div id="emailHelp" class="form-text">
                     </div>
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1">
+                    <label for="exampleInputPassword1" class="form-label">image</label>
+                    <input type="file" name="image" class="form-control" id="exampleInputPassword1">
                 </div>
-                <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                </div>
+           
                 <button type="submit" class="btn btn-primary">Sign in</button>
             </form>
         </div>
