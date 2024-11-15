@@ -9,3 +9,4 @@ Route::get("category",function(){
     return view("panel.category");
 });
 Route::post("category",[CategoryController::class,"AddCategory"]);
+Route::get("details",[CategoryController::class,"AllCategories"]);

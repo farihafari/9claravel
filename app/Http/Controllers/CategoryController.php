@@ -16,4 +16,9 @@ class CategoryController extends Controller
         $category->save();
         return back()->with("submitted","successfully");
     }
+
+    function AllCategories(){
+        $allCat = Category::all();
+        return view("panel.viewcat",compact("allCat"));
+    }
 }
