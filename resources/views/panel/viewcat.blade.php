@@ -23,8 +23,8 @@
                                 <tr>
                                     <th scope="row">{{$values['name']}}</th>
                                     <td><img src="assets/img/categories/{{$values['image']}}" alt="" srcset="" width="90px"></td>
-                                    <td><a href="" class="btn btn-info">Edit</a></td>
-                                    <td><a href="" class="btn btn-danger">Delete</a></td>
+                                    <td><a href="update.{{$values['id']}}" class="btn btn-info">Edit</a></td>
+                                    <td><a href="delete.{{$values['id']}}" class="btn btn-danger">Delete</a></td>
                                 </tr>
                                 @endforeach
                             </tbody>
@@ -33,4 +33,13 @@
                 </div>
             </div>
             <!-- Blank End -->
+            @if(session("update"))
+            <script>
+                alert("update category successfully")
+            </script>
+            @elseif(session("delete"))
+            <script>
+                alert("delete category successfully")
+            </script>
+            @endif
 @include("components.footer")
